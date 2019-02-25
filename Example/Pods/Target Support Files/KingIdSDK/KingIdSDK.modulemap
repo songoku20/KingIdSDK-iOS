@@ -1,0 +1,6 @@
+framework module KingIdSDK {
+  umbrella header "KingIdSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

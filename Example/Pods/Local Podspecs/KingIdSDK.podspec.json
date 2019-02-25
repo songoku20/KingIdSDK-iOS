@@ -1,0 +1,22 @@
+{
+  "name": "KingIdSDK",
+  "version": "0.1.0",
+  "summary": "A short description of KingIdSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/linhct.dev@gmail.com/KingIdSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linhct.dev@gmail.com": "sonleminh@vccorp.vn"
+  },
+  "source": {
+    "git": "https://github.com/linhct.dev@gmail.com/KingIdSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KingIdSDK/Classes/**/*"
+}
