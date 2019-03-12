@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AccessToken.h"
+#import "KingAccessToken.h"
 #import "KingIdException.h"
-#import "UserInfo.h"
+#import "KingUserInfo.h"
 @import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -25,12 +25,12 @@ static NSInteger NATIVE_WITH_FALLBACK = 1; //Show fullscreen authen otherwise sh
 static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 
 @protocol OnKingIdResponse
--(void)onRequestSuccess:(UserInfo*)userInfo;
+-(void)onRequestSuccess:(KingUserInfo*)userInfo;
 -(void)onRequestFailed:(KingIdException*) e;
 @end
 
 @protocol OnKingIdLoginCallback
--(void)onAuthenSuccess:(AccessToken*) accessToken;
+-(void)onAuthenSuccess:(KingAccessToken*) accessToken;
 -(void)onAuthenFailed:(KingIdException*) kingIdException;
 -(void)onAuthenCancel;
 @end
@@ -38,6 +38,7 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 //For VietIdSDK public method and properties
 @interface KingIdSDKController : NSObject
 
+@property(nonatomic) BOOL debugMode;
 @property(nonatomic, strong) NSString* language;
 @property(nonatomic, readonly) NSInteger actionType;
 @property(nonatomic, strong) id<OnKingIdLoginCallback> onKingIdLoginCallback;
@@ -107,11 +108,11 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 /**
  * Get user info with asynchronous
  */
--(void)getUserInfoAsync:(void(^)(BOOL  success,KingIdException* error,UserInfo* userinfo))callback;
+-(void)getUserInfoAsync:(void(^)(BOOL  success,KingIdException* error,KingUserInfo* userinfo))callback;
 /**
  * Get user info with synchronous
  */
--(UserInfo*)getUserInfo;
+-(KingUserInfo*)getUserInfo;
 
 /**
  * Set disable phone number on login session: YES if you want disable login via vietID with phonenumber otherwise

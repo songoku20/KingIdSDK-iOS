@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AccessToken : NSObject
+@interface KingAccessToken : NSObject
 
 /**
  * @return Your accessToken when login via kingID successfully
@@ -31,15 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Not call method everytime from your app
  */
-+(AccessToken*) initFromDic:(NSDictionary*) dict;
++(KingAccessToken*) initFromDic:(NSDictionary*) dict;
 /**
  * @return Current token when login successfully
  */
-+(AccessToken*)getCurrentAccessToken;
++(KingAccessToken*)getCurrentAccessToken;
 /**
  * Set current accessToken nil if
  */
-+(void)setCurrentAccessToken:(AccessToken*)accessToken;
++(void)setCurrentAccessToken:(KingAccessToken*)accessToken;
 /**
  * Get accessToken object as NSDictionary
  */

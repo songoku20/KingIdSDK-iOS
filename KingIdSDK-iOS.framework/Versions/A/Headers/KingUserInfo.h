@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserInfo : NSObject
+@interface KingUserInfo : NSObject
 
 @property(nonatomic, strong) NSString* userId      ;
 @property(nonatomic, strong) NSString* uniqid      ;
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Not call method everytime from your app
  */
-+(UserInfo*) initFromDic:(NSDictionary*) dict;
++(KingUserInfo*) initFromDic:(NSDictionary*) dict;
 /**
  * Get userinfo object as NSDictionary
  */
