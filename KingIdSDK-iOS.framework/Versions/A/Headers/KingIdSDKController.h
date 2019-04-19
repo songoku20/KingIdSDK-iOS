@@ -43,6 +43,7 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 @property(nonatomic, readonly) NSInteger actionType;
 @property(nonatomic, strong) id<OnKingIdLoginCallback> onKingIdLoginCallback;
 @property(nonatomic, strong) id<OnKingIdResponse> onKingIdResponseRequest;
+@property(nonatomic) BOOL disableExitLogin;
 
 /**
  * Create singleton instance of VietIdSDKController

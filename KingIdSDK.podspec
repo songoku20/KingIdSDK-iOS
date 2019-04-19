@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KingIdSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.4'
   s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
-  s.source           = { :http => "https://github.com/songoku20/KingIdSDK-iOS/releases/download/0.1.1/KingIdSDK-v0.1.1.zip" }
+  s.source           = { :http => "https://github.com/songoku20/KingIdSDK-iOS/releases/download/0.1.4/KingIdSDK-v0.1.4.zip" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # s.ios.deployment_target = '8.0'
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.preserve_paths      = 'KingIdSDK-iOS.framework'
   s.public_header_files = 'KingIdSDK-iOS.framework/Versions/A/Headers/KingIdSDKController.h'
   s.source_files        = 'KingIdSDK-iOS.framework/Versions/A/Headers/KingIdSDKController.h'
-  s.resource            = 'KingIdSDKResource.bundle'
+  s.resource            = 'KingIdSDK-iOS.bundle'
   s.vendored_frameworks = 'KingIdSDK-iOS.framework'
 
 end
